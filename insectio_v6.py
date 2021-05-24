@@ -2,7 +2,6 @@ import pygame as pg
 import sys
 import math
 from random import randint, uniform
-import numpy as np
 
 from pygame.constants import MOUSEBUTTONDOWN
 vec = pg.math.Vector2
@@ -138,11 +137,11 @@ class Player(Entity):
     def draw_vectors(self):
         scale = 25
         # vel
-        pg.draw.line(g.screen, GREEN, np.dot((self.rel), (math.log)), vec(self.pos + self.vel * scale), 5)
+        pg.draw.line(g.screen, GREEN, vec(self.pos), vec(self.pos + self.vel * scale), 5)
         # desired
-        pg.draw.line(g.screen, RED, np.dot((self.rel), (math.log)), vec(self.pos + self.desired * scale), 5)
+        pg.draw.line(g.screen, RED, vec(self.pos), vec(self.pos + self.desired * scale), 5)
         # approach radius
-        pg.draw.circle(g.screen, BLACK, np.dot((self.rel), (math.log)), APPROACH_RADIUS, 1)
+        pg.draw.circle(g.screen, BLACK, vec(self.pos), APPROACH_RADIUS, 1)
 
 class Camera():
     def __init__(self, target):
