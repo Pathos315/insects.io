@@ -25,7 +25,7 @@ LEAF = (173, 148, 56)
 SOIL = ( 73, 56, 41)
 SKY = (252, 238, 220)
 
-LADYBUG_PATH = "/Users/johnfallot/Coding Projects/GameIdea/Assets/210502_LadyBug.png"
+LADYBUG_PATH = ###
 LADYBUG = pg.image.load(LADYBUG_PATH)
 
 FPS = 60
