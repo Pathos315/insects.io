@@ -98,10 +98,13 @@ class Player(Entity):
             self.gravity = GRAVITY
         else:
             self.gravity = GRAVITY - self.lift
-
+    
+    """
+    Defunct, role served by def rotate
     def follow_mouse(self):
         mpos = pg.mouse.get_pos()
         self.acc = (mpos - self.pos).normalize() * 0.5
+    """
 
     def seek(self, target):
         self.desired = (target - self.pos).normalize() * MAX_SPEED
