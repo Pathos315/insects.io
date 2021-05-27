@@ -2,6 +2,7 @@ import pygame as pg
 import sys
 import math
 from random import randint, uniform
+from os import path
 
 from pygame.constants import MOUSEBUTTONDOWN
 vec = pg.math.Vector2
